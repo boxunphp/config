@@ -18,6 +18,10 @@ class Config
     private $path;
     private $data;
 
+    public function __construct()
+    {
+    }
+
     public function setPath($path)
     {
         $this->path = $path;

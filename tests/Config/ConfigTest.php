@@ -13,14 +13,20 @@ use PHPUnit\Framework\TestCase;
 
 class ConfigTest extends TestCase
 {
+    /**
+     * @var Config
+     */
     private $config;
 
     protected function setUp()
     {
-        $this->config = Config::getInstance();
+        $this->config = new Config();
         $this->config->setPath(__DIR__);
     }
 
+    /**
+     * @throws \Exception
+     */
     public function testGet()
     {
         $this->assertEquals(['master' => ['host' => '127.0.0.1']], $this->config->get('config'), '127.0.0.1');

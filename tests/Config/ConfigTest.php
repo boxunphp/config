@@ -6,7 +6,7 @@
  * Time: 6:06 PM
  */
 
-namespace ConfigTest;
+namespace Tests\Config;
 
 use All\Config\Config;
 use PHPUnit\Framework\TestCase;
@@ -23,6 +23,7 @@ class ConfigTest extends TestCase
 
     public function testGet()
     {
-        $this->assertEquals($this->config->get('config.master.host'), '127.0.0.1');
+        $this->assertEquals(['master' => ['host' => '127.0.0.1']], $this->config->get('config'), '127.0.0.1');
+        $this->assertEquals('127.0.0.1', $this->config->get('config.master.host'));
     }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "boxunphp/php-config",
+  "name": "boxunphp/config",
   "description": "PHP 配置类",
   "type": "library",
   "license": "MIT",
